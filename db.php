@@ -44,4 +44,4 @@ define('SERVER_USER_NAME' ,'root');
 // db_password   
 define('SERVER_PASSWORD'  ,'');   
 // db_table       
-define('SERVER_DB_TABLE'  ,'wp1');    
+define('SERVER_DB_TABLE'  ,'');    
