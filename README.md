@@ -5,7 +5,7 @@
 <p>PHP CRUD on same page effortless </p> 
 
 ```PHP
- // Create database for CRUD run with SQL environment
+ // Create database table for CRUD run with SQL environment
  
 ```
 
