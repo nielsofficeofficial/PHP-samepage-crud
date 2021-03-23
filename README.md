@@ -15,6 +15,6 @@ Github : To allow me to upload my PHPHtml-Optimizer PHP Library to repository<br
 php.net : To oppurtunity Develop web application using corePHP - PHPFrameworks<br />
 </h5>
 
-__Please Kindly read license and agreement GNU v3.0__
+__Please kindly read license and agreement GNU v3.0__
 <br /> Thanks and good luck! 
 
