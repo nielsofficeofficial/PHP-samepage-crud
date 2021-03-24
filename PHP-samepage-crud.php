@@ -59,19 +59,18 @@ require __DIR__ . '/functions.php';
 
  _table(setEA(['border'],['1']),'tableData');
  
-   _xTR(
-     ELEM('td','User ID')
-    .ELEM('td','Name')
-    .ELEM('td','Email')
-    .ELEM('td','Contact')
-    .ELEM('td','Social Media')
-    .ELEM('td','Action')
-
-    ,setEA(['border'],['1'])
-   ); // End of TR html Optimizer
-
   if($result->num_rows > 0) :
-  
+
+    _xTR(
+      ELEM('td','User ID')
+     .ELEM('td','Name')
+     .ELEM('td','Email')
+     .ELEM('td','Contact')
+     .ELEM('td','Social Media')
+     .ELEM('td','Action')
+ 
+    ); // End of TR html Optimizer
+
     // Display request Result
     while($row = $result->fetch_assoc()) :
 
