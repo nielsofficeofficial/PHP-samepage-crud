@@ -143,7 +143,7 @@ require __DIR__ . '/functions.php';
      );
     _xdiv(
        DOIF($updateRequest == true  ,ELEM('button',' Update Friend ' ,setEA(['type','name'],['submit','updateData'])))
-      .DOIF($updateRequest == false ,ELEM('button',' Add Friends '    ,setEA(['type','name'],['submit','insertData'])))
+      .DOIF($updateRequest == false ,ELEM('button',' Add Friends '   ,setEA(['type','name'],['submit','insertData'])))
      
     );
 
