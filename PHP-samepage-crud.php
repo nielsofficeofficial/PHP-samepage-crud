@@ -115,7 +115,7 @@ require __DIR__ . '/functions.php';
 
     _xdiv(
       ELEM('label','Name: ')
-     .__HTML('Email','input'
+     .__HTML('Name','input'
      ,setEA(['type','name','value'],['text','user_name',"{$unname}"]),'user_name',null 
      
      ,FUNC_ASSOC)
@@ -129,21 +129,21 @@ require __DIR__ . '/functions.php';
      );
     _xdiv(
      ELEM('label','Contact: ')
-    .__HTML('Email','input'
+    .__HTML('Contact','input'
     ,setEA(['type','name','value'],['text','user_contact',"{$ucontact}"]),'user_contact',null 
     
     ,FUNC_ASSOC)
     );
     _xdiv(
       ELEM('label','Social Media: ')
-     .__HTML('Email','input'
+     .__HTML('Social Media','input'
      ,setEA(['type','name','value'],['text','user_sm',"{$usocialm}"]),'user_sm',null 
      
      ,FUNC_ASSOC)
      );
     _xdiv(
        DOIF($updateRequest == true  ,ELEM('button',' Update Friend ' ,setEA(['type','name'],['submit','updateData'])))
-      .DOIF($updateRequest == false ,ELEM('button',' Add Friends '    ,setEA(['type','name'],['submit','insertData'])))
+      .DOIF($updateRequest == false ,ELEM('button',' Add Friends '   ,setEA(['type','name'],['submit','insertData'])))
      
     );
 
