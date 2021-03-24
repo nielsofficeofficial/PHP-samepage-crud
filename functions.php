@@ -79,7 +79,12 @@ require 'db.php';
   // set to true remove special character cannot be insert
   $us = sanitizeRequest($_REQUEST['user_sm'], true);
 
-  ($serverRequest->query("INSERT INTO `friendlist` (`full_name`, `email`, `contact`, `social_media`) VALUES ('$un', '$ue', '$uc', '$us')") == TRUE) ? $_SESSION['msg_handler'] = "New Data has been inserted! " : ("Error: ' . $serverRequest->error");
+  ($serverRequest->query("INSERT INTO 
+      `friendlist` (
+      `full_name`
+      ,`email`
+      ,`contact`
+      ,`social_media`) VALUES ('$un', '$ue', '$uc', '$us')") == TRUE) ? $_SESSION['msg_handler'] = "New Data has been inserted! " : ("Error: ' . $serverRequest->error");
   
   // Return request same page
   redirectRequest("PHP-samepage-crud.php");
@@ -151,7 +156,13 @@ if(isset($_REQUEST['updateData']) == true ) :
   // set to true remove special character cannot be insert
   $us = sanitizeRequest($_REQUEST['user_sm'], true);
 
-  ($serverRequest->query("UPDATE `friendlist` SET full_name = '$un', email = '$ue', contact = '$uc', social_media = '$us' WHERE id = $idUserData") == TRUE) ? $_SESSION['msg_handler'] = "Data updated! " : ("Error: ' . $serverRequest->error");
+  ($serverRequest->query("UPDATE 
+    `friendlist` SET 
+     full_name    = '$un'
+    ,email        = '$ue'
+    ,contact      = '$uc'
+    ,social_media = '$us' 
+     WHERE id     = $idUserData") == TRUE) ? $_SESSION['msg_handler'] = "Data updated! " : ("Error: ' . $serverRequest->error");
  
   redirectRequest("PHP-samepage-crud.php");
  
@@ -166,9 +177,11 @@ endif;
  **/
 if(isset($_REQUEST['delete']) == true) :
 
-  $idRequest  = $_REQUEST['delete'];
+  $idRequest   = $_REQUEST['delete'];
 
-  if($serverRequest->query("DELETE FROM friendlist WHERE id =  $idRequest") == TRUE) : $_SESSION['msg_handler'] = "Data Deleted! ";
+  if($serverRequest->query("DELETE 
+      FROM `friendlist` 
+      WHERE id =  $idRequest") == TRUE) : $_SESSION['msg_handler'] = "Data Deleted! ";
 
    else : ("Error: ' . $serverRequest->error");
   
