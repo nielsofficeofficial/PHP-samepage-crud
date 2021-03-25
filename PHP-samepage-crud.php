@@ -141,8 +141,8 @@ require __DIR__ . '/functions.php';
      ,FUNC_ASSOC)
      );
     _xdiv(
-       DOIF($updateRequest == true  ,ELEM('button',' Update Friend ' ,setEA(['type','name'],['submit','updateData'])))
-      .DOIF($updateRequest == false ,ELEM('button',' Add Friends '   ,setEA(['type','name'],['submit','insertData'])))
+       DOIF($updateRequest == true  ,ELEM('button',' Update Friend ' ,setEA(['type','name'],['submit','updateData'])), FUNC_ASSOC )
+      .DOIF($updateRequest == false ,ELEM('button',' Add Friends '   ,setEA(['type','name'],['submit','insertData'])), FUNC_ASSOC)
      
     );
 
